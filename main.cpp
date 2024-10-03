@@ -17,11 +17,16 @@ int menuValidIntegerChecker(string prompt, string errorMessage, int lower = INT_
         cin >> input;
 
         if (isValidInput(lower, upper, input)) {
+            printResult(input);
             return input;
         } else {
             cout << errorMessage << endl;
         }
     }
+}
+
+void printResult(int result) {
+    cout << "The value selected by the user: " << result << endl;
 }
 
 int main () {
@@ -31,22 +36,22 @@ int main () {
     int result;
 
     result = menuValidIntegerChecker(prompt, errorMessage);
-    cout << result << endl;
+    printResult(result);
 
     result = menuValidIntegerChecker("Please enter a number (0-1000):", errorMessage, 0, 1000);
-    cout << result << endl;
+    printResult(result);
 
     result = menuValidIntegerChecker("Please enter a number < 500:", errorMessage, INT_MIN, 500);
-    cout << result << endl;
+    printResult(result);
 
     result = menuValidIntegerChecker("Please enter a number > -500:", errorMessage, -500, INT_MAX);
-    cout << result << endl;
+    printResult(result);
 
     result = menuValidIntegerChecker("Please enter a number larger > 7:", errorMessage, 7, INT_MAX);
-    cout << result << endl;
+    printResult(result);
 
     result = menuValidIntegerChecker("Please enter a number between -1000 and 1000:", errorMessage, -1000, 1000);
-    cout << result << endl;
+    printResult(result);
 
     return 0;
 }
