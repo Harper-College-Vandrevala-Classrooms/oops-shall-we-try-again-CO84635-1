@@ -110,7 +110,7 @@ int main () {
 
     /*For the test in our driver program where we just have this signature below for our integer. Where no upper and lower bounds are present, and no default is passed, it meets the same signature as the overloaded string menu checker?
     I will still provide examples if we have no upper or no lower bounds if the default is present, but I cannot figure out how to not have this be ambigous. I think the only way would be having a default argumement for error message, or different function names, 
-    but that isn't in the directions. This works, but when I overloaded for the string addon it is ambigous.*/
+    but that isn't in the directions*/
     // validated_int = menu_checker(prompt, error_message); 
     // print_result(validated_int);
 
@@ -145,7 +145,6 @@ int main () {
     print_result(validated_int);
 
     validated_int = menu_checker(prompt, error_message, -1000, 1000, 0);
-
     print_result(validated_int);
 
     string prompt2 = "Please enter a string value: ";

@@ -1,0 +1,4 @@
+The EXIT_VALUE constant is returned by the user when they utilize the menu to exit the application.
+Since no one will be using the absolute minimum value that an integer in C++ can have, this constant contains the INT_MIN value.
+This guarantees that the terminal is hardcoded to report results only in the event that the value does not equal EXIT_VALUE.
+Since the example instructed us to just terminate the program without producing any output, I didn't return an error or any other kind.
